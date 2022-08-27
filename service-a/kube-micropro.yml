@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: micropro
-          image: mit/micropro
+          image: mittuthomasoracle/micropro
           ports:
             - containerPort: 3000
           env:
@@ -34,4 +34,4 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      nodePort: 30100
+      nodePort: 30200
