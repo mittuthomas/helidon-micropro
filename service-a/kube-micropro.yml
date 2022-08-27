@@ -18,7 +18,7 @@ spec:
         - name: micropro
           image: mittuthomasoracle/micropro
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
           env:
 
 ---
@@ -32,6 +32,6 @@ spec:
     app: micropro
   ports:
     - protocol: TCP
-      port: 3000
-      targetPort: 3000
-      nodePort: 30200
+      port: 8080
+      targetPort: 8080
+      nodePort: 31000

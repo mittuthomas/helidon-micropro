@@ -82,7 +82,7 @@ Specification [here](https://microprofile.io/project/eclipse/microprofile-rest-c
 The example calls one endpoint from another JAX-RS resource where generated Rest Client is injected as CDI bean.
 
 cd service-a
-docker build -t mit/micropro .             <--- notice the dot at end
+docker build -t mittuthomasoracle/micropro .             <--- notice the dot at end
 kubectl apply -f kube-micropro.yml
 kubectl get all
 kubectl logs webapp-deployment-7c4779c7cd-lh8lq
