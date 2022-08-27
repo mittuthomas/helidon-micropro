@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/helidon-micro.iml" filepath="$PROJECT_DIR$/helidon-micro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-a/helidon-micro-service-a.iml" filepath="$PROJECT_DIR$/service-a/helidon-micro-service-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-b/helidon-micro-service-b.iml" filepath="$PROJECT_DIR$/service-b/helidon-micro-service-b.iml" />
+    </modules>
+  </component>
+</project>
