@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micropro-deployment
+  labels:
+    app: micropro
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: micropro
+  template:
+    metadata:
+      labels:
+        app: micropro
+    spec:
+      containers:
+        - name: micropro
+          image: mit/micropro
+          ports:
+            - containerPort: 3000
+          env:
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: micropro-service
+spec:
+  type: NodePort
+  selector:
+    app: micropro
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30100
