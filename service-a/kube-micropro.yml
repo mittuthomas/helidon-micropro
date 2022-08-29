@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: micropro-deployment
+  namespace: feed-objstore-poc
   labels:
     app: micropro
 spec:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
         - name: micropro
-          image: mittuthomasoracle/micropro
+          image: artifactory-master.cdaas.oraclecloud.com/docker-cxsales-dev/cxsales/sales-common/cxsales/mittupoc:test1
           ports:
             - containerPort: 8080
           env:
@@ -26,6 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: micropro-service
+  namespace: feed-objstore-poc
 spec:
   type: NodePort
   selector:

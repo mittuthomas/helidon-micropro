@@ -1,5 +1,7 @@
 package com.example.helidon.micro;
 
+import com.ObjectStorageService;
+
 import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -25,7 +27,13 @@ public class HelloController {
             e.printStackTrace();
         }
        System.out.println(ip);
+String output = null;
+        try {
+            output = ObjectStorageService.connect();//.main(new String[2]);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        return ip + "Hello World";
+        return ip + " Hello World" +"\n"+ output;
     }
 }
